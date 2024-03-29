@@ -9,7 +9,7 @@ Test Teardown    Close Browser
 
 *** Test Cases ***
 Product Should Be Added To Cart
-    [Tags]    add    smoke
+    [Tags]    add
 
     Open Product Page
     Select Size     M
@@ -19,7 +19,7 @@ Product Should Be Added To Cart
     Products Quantity Should Be Equal To    1
 
 Product Data In Cart Should Be Consistent
-    [Tags]    add    smoke
+    [Tags]    add
 
     VAR     ${size} =    S
     VAR     ${color} =    Black
