@@ -25,3 +25,12 @@ Update Items Qty In Cart
 
 Click Item Edit Button
     Click Element      class=${CartPageLocators.ITEM_EDIT_BUTTON_CLASS_NAME}
+
+Click Item Delete Button
+    Click Element    class=${CartPageLocators.ITEM_DELETE_BUTTON_CLASS_NAME}
+
+Empty Cart Message Should Be Present
+    Page Should Contain Element     class=${CartPageLocators.EMPTY_CART_MSG_CLASS_NAME}
+
+Cart Should Be Empty
+    Page Should Contain Element    css=${CartPageLocators.EMPTY_CART_CSS_SELECTOR}

@@ -71,3 +71,17 @@ Products Options Should Be Updated
     Success Message Should Be Present
     Size In Cart Should Be Consistent To        ${size_new}
     Color In Cart Should Be Consistent To       ${color_new}
+
+Product Should Be Deleted From Shopping Cart
+    [Tags]      delete
+
+    Open Product Page
+    Select Size     L
+    Select Color    Yellow
+    Click Add To Cart Button
+    Wait Until Counter Number Is Equal To    1
+
+    Open Cart Page
+    Click Item Delete Button
+    Empty Cart Message Should Be Present
+    Cart Should Be Empty
