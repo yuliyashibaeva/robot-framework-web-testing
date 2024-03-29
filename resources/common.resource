@@ -6,7 +6,7 @@ Variables       locators.py
 
 *** Keywords ***
 Open Chrome Browser And Set Implicit Wait
-    [Arguments]     ${time}=${10}
+    [Arguments]     ${time}=10
     Open Browser    browser=chrome
     Set Browser Implicit Wait    ${time}
 

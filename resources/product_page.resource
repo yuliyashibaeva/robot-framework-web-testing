@@ -16,13 +16,11 @@ Open Product Page
 
 Select Size
     [Arguments]      ${size}=M
-    ${size} =   Convert To Upper Case    ${size}
-    Click Element    id=${SIZES.${size}_SIZE_ID}
+    Click Element    id=${SIZES.${size.upper()}_SIZE_ID}
 
 Select Color
     [Arguments]      ${color}=orange
-    ${color} =  Convert To Upper Case    ${color}
-    Click Element    id=${COLORS.${color}_COLOR_ID}
+    Click Element    id=${COLORS.${color.upper()}_COLOR_ID}
 
 Click Add To Cart Button
     Click Button    id=${ProductPageLocators.ADD_TO_CART_BUTTON_ID}
