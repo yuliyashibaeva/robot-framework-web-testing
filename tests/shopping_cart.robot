@@ -21,8 +21,8 @@ Product Should Be Added To Cart
 Product Data In Cart Should Be Consistent
     [Tags]    add    smoke
 
-    ${size} =     Set Variable   S
-    ${color} =    Set Variable   Black
+    VAR     ${size} =    S
+    VAR     ${color} =    Black
 
     Open Product Page
     Select Size     ${size}
@@ -43,7 +43,7 @@ Items Quantity Should Be Updated
     Wait Until Counter Number Is Equal To    1
     Open Cart Page
 
-    ${items_qty_new} =      Set Variable    3
+    VAR     ${items_qty_new} =    3
 
     Update Items Qty In Cart    ${items_qty_new}
     Wait Until Counter Number Is Equal To     ${items_qty_new}
@@ -52,8 +52,8 @@ Items Quantity Should Be Updated
 Products Options Should Be Updated
     [Tags]     update
 
-    ${size_new} =     Set Variable   L
-    ${color_new} =    Set Variable   Black
+    VAR     ${size_new} =     L
+    VAR     ${color_new} =    Black
 
     Open Product Page
     Select Size     M
