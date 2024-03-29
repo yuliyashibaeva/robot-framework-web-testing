@@ -28,7 +28,46 @@ Product Data In Cart Should Be Consistent
     Select Size     ${size}
     Select Color    ${color}
     Click Add To Cart Button
-    Wait Until Counter Number Is Not Empty
+    Wait Until Counter Number Is Equal To    1
     Open Cart Page
     Size In Cart Should Be Consistent To    ${size}
     Color In Cart Should Be Consistent To    ${color}
+
+Items Quantity Should Be Updated
+    [Tags]    update
+
+    Open Product Page
+    Select Size     XS
+    Select Color    Yellow
+    Click Add To Cart Button
+    Wait Until Counter Number Is Equal To    1
+    Open Cart Page
+
+    ${items_qty_new} =      Set Variable    3
+
+    Update Items Qty In Cart    ${items_qty_new}
+    Wait Until Counter Number Is Equal To     ${items_qty_new}
+    Products Quantity Should Be Equal To      ${items_qty_new}
+
+Products Options Should Be Updated
+    [Tags]     update
+
+    ${size_new} =     Set Variable   L
+    ${color_new} =    Set Variable   Black
+
+    Open Product Page
+    Select Size     M
+    Select Color    Orange
+    Click Add To Cart Button
+    Wait Until Counter Number Is Equal To    1
+
+    Open Cart Page
+    Click Item Edit Button
+
+    Select Size     ${size_new}
+    Select Color    ${color_new}
+    Click Update Cart Button
+
+    Success Message Should Be Present
+    Size In Cart Should Be Consistent To        ${size_new}
+    Color In Cart Should Be Consistent To       ${color_new}

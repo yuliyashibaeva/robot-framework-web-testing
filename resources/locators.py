@@ -21,6 +21,7 @@ class ProductPageLocators:
     }
 
     ADD_TO_CART_BUTTON_ID = "product-addtocart-button"
+    UPDATE_CART_BUTTON_ID = "product-updatecart-button"
 
 
 class CartPageLocators:

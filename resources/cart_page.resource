@@ -10,9 +10,18 @@ Open Cart Page
     Go To    ${CART_PAGE_LINK}
 
 Size In Cart Should Be Consistent To
-    [Arguments]     ${initial_size}
-    Element Text Should Be    css=${CartPageLocators.ITEM_SIZE_CSS_SELECTOR}    ${initial_size}
+    [Arguments]     ${size}
+    Element Text Should Be    css=${CartPageLocators.ITEM_SIZE_CSS_SELECTOR}    ${size}
 
 Color In Cart Should Be Consistent To
-    [Arguments]     ${initial_color}
-    Element Text Should Be    css=${CartPageLocators.ITEM_COLOR_CSS_SELECTOR}    ${initial_color}
+    [Arguments]     ${color}
+    Element Text Should Be    css=${CartPageLocators.ITEM_COLOR_CSS_SELECTOR}    ${color}
+
+Update Items Qty In Cart
+    [Arguments]     ${items_qty_new}
+    Clear Element Text    css=${CartPageLocators.QTY_INPUT_CSS_SELECTOR}
+    Input Text            css=${CartPageLocators.QTY_INPUT_CSS_SELECTOR}    ${items_qty_new}
+    Click Button          class=${CartPageLocators.UPDATE_CART_BUTTON_CLASS_NAME}
+
+Click Item Edit Button
+    Click Element      class=${CartPageLocators.ITEM_EDIT_BUTTON_CLASS_NAME}

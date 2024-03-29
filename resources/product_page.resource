@@ -26,3 +26,6 @@ Select Color
 
 Click Add To Cart Button
     Click Button    id=${ProductPageLocators.ADD_TO_CART_BUTTON_ID}
+
+Click Update Cart Button
+    Click Button    id=${ProductPageLocators.UPDATE_CART_BUTTON_ID}
