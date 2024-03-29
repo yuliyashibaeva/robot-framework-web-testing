@@ -11,19 +11,19 @@ Variables       locators.py
 &{COLORS}   &{ProductPageLocators.COLORS_DICT}
 
 *** Keywords ***
-Open Product Page
-    Go To    ${NADIA_ELEMENTS_SHELL_PRODUCT_PAGE_LINK}
-
-Select Size
-    [Arguments]      ${size}=M
-    Click Element    id=${SIZES.${size.upper()}_SIZE_ID}
-
-Select Color
-    [Arguments]      ${color}=orange
-    Click Element    id=${COLORS.${color.upper()}_COLOR_ID}
-
 Click Add To Cart Button
     Click Button    id=${ProductPageLocators.ADD_TO_CART_BUTTON_ID}
 
 Click Update Cart Button
     Click Button    id=${ProductPageLocators.UPDATE_CART_BUTTON_ID}
+
+Open Product Page
+    Go To    ${NADIA_ELEMENTS_SHELL_PRODUCT_PAGE_LINK}
+
+Select Color
+    [Arguments]      ${color}=orange
+    Click Element    id=${COLORS.${color.upper()}_COLOR_ID}
+
+Select Size
+    [Arguments]      ${size}=M
+    Click Element    id=${SIZES.${size.upper()}_SIZE_ID}

@@ -1,4 +1,15 @@
 
+class CartPageLocators:
+    ITEM_SIZE_CSS_SELECTOR = ".item-options > dd:nth-child(2)"
+    ITEM_COLOR_CSS_SELECTOR = ".item-options > dd:nth-child(4)"
+    QTY_INPUT_CSS_SELECTOR = "input.qty"
+    UPDATE_CART_BUTTON_CLASS_NAME = "update"
+    ITEM_EDIT_BUTTON_CLASS_NAME = "action-edit"
+    ITEM_DELETE_BUTTON_CLASS_NAME = "action-delete"
+    EMPTY_CART_MSG_CLASS_NAME = "cart-empty"
+    EMPTY_CART_CSS_SELECTOR = "a.showcart > span.empty"
+
+
 class CommonLocators:
     CART_PRODUCTS_NUMBER_CLASS_NAME = "counter-number"
     CART_COUNTER_CSS_SELECTOR = "a.showcart > span.counter"
@@ -22,14 +33,3 @@ class ProductPageLocators:
 
     ADD_TO_CART_BUTTON_ID = "product-addtocart-button"
     UPDATE_CART_BUTTON_ID = "product-updatecart-button"
-
-
-class CartPageLocators:
-    ITEM_SIZE_CSS_SELECTOR = ".item-options > dd:nth-child(2)"
-    ITEM_COLOR_CSS_SELECTOR = ".item-options > dd:nth-child(4)"
-    QTY_INPUT_CSS_SELECTOR = "input.qty"
-    UPDATE_CART_BUTTON_CLASS_NAME = "update"
-    ITEM_EDIT_BUTTON_CLASS_NAME = "action-edit"
-    ITEM_DELETE_BUTTON_CLASS_NAME = "action-delete"
-    EMPTY_CART_MSG_CLASS_NAME = "cart-empty"
-    EMPTY_CART_CSS_SELECTOR = "a.showcart > span.empty"
