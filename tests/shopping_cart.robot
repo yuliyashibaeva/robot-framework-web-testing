@@ -4,7 +4,7 @@ Resource    ../resources/product_page.resource
 Resource    ../resources/common.resource
 Resource    ../resources/cart_page.resource
 
-Test Setup    Open Chrome Browser And Set Implicit Wait
+Test Setup    Open Browser And Set Implicit Wait
 Test Teardown    Close Browser
 
 *** Test Cases ***

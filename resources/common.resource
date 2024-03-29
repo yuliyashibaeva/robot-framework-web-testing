@@ -4,14 +4,17 @@ Documentation   Keywords needed to work with common elements
 Library         SeleniumLibrary
 Variables       locators.py
 
+*** Variables ***
+${browser}      chrome
+${time}         10
+
 *** Keywords ***
 Get Items Qty In Cart
     ${items_qty_cart} =   Get Text    class=${CommonLocators.CART_PRODUCTS_NUMBER_CLASS_NAME}
     RETURN  ${items_qty_cart}
 
-Open Chrome Browser And Set Implicit Wait
-    [Arguments]     ${time}=10
-    Open Browser    browser=chrome
+Open Browser And Set Implicit Wait
+    Open Browser    browser=${browser}
     Set Browser Implicit Wait    ${time}
 
 Products Quantity Should Be Equal To
