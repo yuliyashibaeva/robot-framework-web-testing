@@ -2,9 +2,8 @@
 Documentation   Keywords needed to work with product page
 
 Library         SeleniumLibrary
-Library         String
-Variables       links.py
-Variables       locators.py
+Variables       ../variables/links.py
+Variables       ../variables/locators.py
 
 *** Variables ***
 &{SIZES}    &{ProductPageLocators.SIZES_DICT}

@@ -2,8 +2,8 @@
 Documentation   Keywords needed to work with the cart
 
 Library         SeleniumLibrary
-Variables       links.py
-Variables       locators.py
+Variables       ../variables/links.py
+Variables       ../variables/locators.py
 
 *** Keywords ***
 Cart Should Be Empty

@@ -2,7 +2,7 @@
 Documentation   Keywords needed to work with common elements
 
 Library         SeleniumLibrary
-Variables       locators.py
+Variables       ../variables/locators.py
 
 *** Variables ***
 ${browser}      chrome
