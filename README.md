@@ -4,8 +4,8 @@ This is a pet project to polish up my test automation skills
 using [Robot Framework](https://robotframework.org/). 
 These are the same tests that I had developed previously using other technologies: 
 [Selenium Project](https://github.com/yuliyashibaeva/python-selenium-online-store). 
-While learning the Robot Framework, I implemented the same tests to learn by doing 
-and demonstrate that I'm able to solve the same task in different ways.
+While learning Robot Framework, I implemented the same test scenarios to learn by doing 
+and demonstrate that I can solve the same task in different ways.
 
 **NOTE:** All comments and advice are very welcome. Please, be polite.
 
@@ -22,20 +22,24 @@ https://magento.softwaretestingboard.com/.
 ## 🚀 How to run the tests
 
 1. Clone the repository.
-2. Install the dependencies from [the "requirements.txt" file](https://github.com/yuliyashibaeva/robot-framework-web-testing/blob/main/requirements.txt).
-3. Run the tests in the console with the command:<br>
+2. Go to the project directory.
+3. Install dependencies using the command:
+```shell
+pip install -r requirements.txt
+```
+4. Run tests in the console using the command:<br>
 ```shell
 robot .\tests\
 ```
 
 ### 🌐 Specify a browser
 
-You can choose a browser to use with the following command:<br>
+You can choose a browser for use with the following command:<br>
 ```shell
 robot --variables browser:firefox .\tests\
 ```
 
-This command will run tests using the Firefox browser. 
+This command will run tests using Firefox browser. 
 Possible options for the "browser" variable can be found 
 [here](https://robotframework.org/SeleniumLibrary/SeleniumLibrary.html#Open%20Browser)
 (official SeleniumLibrary documentation). 
@@ -43,7 +47,7 @@ The default browser is Chrome.
 
 ### 🏷️ Specify tests to run
 
-I set the following tags for the tests:
+I set the following tags for my tests:
 
 * **add**: tests that check whether an item has been added to the cart;
 * **update**: tests that check whether an item in the cart has been updated;
